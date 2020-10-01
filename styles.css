@@ -1,0 +1,86 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+html,
+body {
+  height: 98%;
+}
+
+body {
+  text-align: center;
+  background: linear-gradient(to left, rgb(255, 65, 108), rgb(255, 75, 43));
+  font-family: "Montserrat", sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+h1 {
+  color: #fff;
+  /* margin-bottom: auto; */
+}
+
+.grid {
+  margin: auto 10%;
+  justify-content: center;
+  background-color: transparent;
+  display: grid;
+  grid-template-columns: repeat(4, min(24%, 150px));
+  grid-gap: 5px;
+}
+
+@media (max-width: 600px) {
+  .grid {
+    width: 90%;
+    grid-template-columns: repeat(3, min(24%, 90px));
+    grid-gap: 5px;
+  }
+}
+
+.grid > img {
+  width: 100%;
+}
+
+.flip {
+  animation: flip-anim 0.5s linear 0s 1 forwards;
+}
+
+.flip-half {
+  animation: flip-half-anim 1s linear 0s 1 forwards;
+}
+
+button {
+  font-size: 20px;
+  height: 40px;
+  width: 100px;
+  color: #fff;
+  background: linear-gradient(to left, rgb(255, 65, 108), rgb(255, 75, 43));
+  border: 1px solid #fff;
+  border-radius: 10px;
+  /* opacity: 0; */
+  /* I thought that we should be able to restart game at any time. */
+  margin-bottom: 2rem;
+}
+
+button:hover {
+  background: #fff;
+  color: red;
+}
+
+@keyframes flip-anim {
+  from {
+    transform: rotateY(360deg);
+  }
+  to {
+    transform: rotateY(0deg);
+  }
+}
+
+@keyframes flip-half-anim {
+  from {
+    transform: rotateY(180deg);
+  }
+  to {
+    transform: rotateY(0deg);
+  }
+}
