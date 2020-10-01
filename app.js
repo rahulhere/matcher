@@ -64,7 +64,7 @@ var cardsWon = [];
 function createBoard() {
   for (var i = 0; i < cardArray.length; i++) {
     var card = document.createElement("img");
-    card.setAttribute("src", "images/Capture.png");
+    card.setAttribute("src", "images/Capture.PNG");
     card.setAttribute("data-id", i);
     card.addEventListener("click", flipCard);
 
@@ -96,16 +96,16 @@ function checkForMatch() {
     $(cards[optionOneId]).addClass("flip-half");
     $(cards[optionTwoId]).addClass("flip-half");
     setTimeout(() => {
-      cards[optionOneId].setAttribute("src", "images/Capture.png");
-      cards[optionTwoId].setAttribute("src", "images/Capture.png");
+      cards[optionOneId].setAttribute("src", "images/Capture.PNG");
+      cards[optionTwoId].setAttribute("src", "images/Capture.PNG");
     }, 500);
     setTimeout(() => {
       $(cards[optionOneId]).removeClass("flip-half");
       $(cards[optionTwoId]).removeClass("flip-half");
     }, 1000);
 
-    cards[optionOneId].setAttribute("src", "images/Capture.png");
-    cards[optionTwoId].setAttribute("src", "images/Capture.png");
+    cards[optionOneId].setAttribute("src", "images/Capture.PNG");
+    cards[optionTwoId].setAttribute("src", "images/Capture.PNG");
   }
 
   cardsChosenId = [];
@@ -135,7 +135,7 @@ function flipCard() {
   $(this).addClass("flip");
   setTimeout(() => {
     if (cardsChosen[1] && cardsChosen[0] === cardsChosen[1]) {
-      this.setAttribute("src", "images/Capture.png");
+      this.setAttribute("src", "images/Capture.PNG");
     } else {
       this.setAttribute("src", cardArray[cardId].img);
     }
